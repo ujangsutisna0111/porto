@@ -56,7 +56,7 @@ export const skillGroups = [
   },
   {
     title: "Basis Data",
-    items: ["MySQL", "SQL Server Management","PostgreSQL"],
+    items: ["MySQL", "SQL Server Management", "PostgreSQL"],
   },
   {
     title: "Desain UI/UX",
@@ -142,8 +142,13 @@ export const projects = [
     role: "Frontend Web Developer",
     stack: "Dart (Flutter)",
     category: "Web",
-    cover: "/images/portfolio/lms-pendekar-akademi/lms-soal.png",
-    gallery: ["/images/portfolio/lms-pendekar-akademi/lms-soal.png"],
+    cover: "/images/portfolio/lms-pendekar-akademi/lms1.png",
+    gallery: [
+      "/images/portfolio/lms-pendekar-akademi/lms1.png",
+      "/images/portfolio/lms-pendekar-akademi/lms2.png",
+      "/images/portfolio/lms-pendekar-akademi/lms3.png",
+      "/images/portfolio/lms-pendekar-akademi/lms4.png",
+    ],
     summary:
       "Learning Management System internal untuk kebutuhan training, dibangun dari hasil wawancara langsung dengan Divisi Training.",
     points: [
