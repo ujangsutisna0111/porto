@@ -14,9 +14,9 @@ export const profile = {
 export const education = [
   {
     degree: "S1 Teknik Informatika — Software Engineering",
-    period: "2022 – 2025",
+    period: "2021 – 2025",
     institution: "Institut Teknologi dan Bisnis Bina Sarana Global",
-    detail: "IPK sementara: 3.62",
+    detail: "IPK : 3.62",
   },
 ];
 
@@ -193,17 +193,18 @@ export const projects = [
   },
   {
     slug: "spparu",
-    title: "SPParu",
+    title: "SITB",
     role: "Mobile Developer",
     stack: "Flutter",
     category: "Mobile",
     cover: "/images/portfolio/spparu/spparu-poster.png",
     gallery: ["/images/portfolio/spparu/spparu-poster.png"],
     summary:
-      "Sistem pakar diagnosa penyakit paru-paru menggunakan algoritma Naive Bayes.",
+      "Sistem pakar diagnosa kemungkinan penyakit Tuberkulosis menggunakan algoritma Forward chaining dan Certainty factor.",
     points: [
-      "Implementasi algoritma Naive Bayes untuk diagnosa.",
-      "Aplikasi mobile berbasis Flutter.",
+      "Implementasi algoritma forward chaining dan certainty factor untuk diagnosa.",
+      "Penelitian dan pengambilan data di lakukan di puskesmas kedaung barat",
+      "Aplikasi mobile berbasis Flutter dan express",
     ],
   },
   {
