@@ -40,7 +40,7 @@ import SectionHeading from "../components/SectionHeading.vue";
             <p>
               S1 Teknik Informatika — Software Engineering<br />
               Institut Teknologi dan Bisnis Bina Sarana Global (2022 – 2025)<br />
-              IPK sementara: 3.62
+              IPK : 3.62
             </p>
           </div>
         </div>
