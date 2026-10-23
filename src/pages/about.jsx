@@ -22,8 +22,8 @@ const expertise = [
 
 const About = () => {
   return (
-    <main className="flex flex-1 flex-col md:flex-row gap-12 px-container-mobile py-10 sm:gap-16 sm:px-8 sm:py-12 lg:gap-20 lg:px-desktop lg:py-16">
-      <section className="flex flex-col flex-1 items-center md:items-start">
+    <main className="flex flex-1  flex-col text-center md:text-left md:flex-row gap-12 px-container-mobile py-10 sm:gap-16 sm:px-8 sm:py-12 lg:gap-20 lg:px-desktop lg:py-16">
+      <section className=" flex-1 ">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-green">
           Tentang Saya
         </p>

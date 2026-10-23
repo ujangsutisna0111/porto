@@ -31,14 +31,14 @@ const education = [
 const Educations = () => {
   return (
     <main className="flex-1 px-container-mobile py-12 md:px-desktop md:py-16">
-      <header className="mx-auto mb-12 max-w-3xl text-center">
+      <header className=" mb-12 max-w-3xl text-center md:text-left">
         <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-brand-green">
           Pendidikan &amp; Pembelajaran
         </p>
         <h1 className="text-3xl font-bold text-brand-green">
           Terus belajar, terus bertumbuh
         </h1>
-        <p className="mt-4 text-base leading-relaxed text-gray-600 md:text-lg">
+        <p className="mt-4 text-base text-justify leading-relaxed text-gray-600 md:text-lg">
           Membangun fondasi teknologi melalui pendidikan formal dan pembelajaran
           berkelanjutan.
         </p>
@@ -76,7 +76,7 @@ const Educations = () => {
                 <p className="mt-1 font-medium leading-relaxed text-gray-700">
                   {item.institution}
                 </p>
-                <p className="mt-3 text-sm leading-relaxed text-gray-600 sm:text-base">
+                <p className="mt-3 text-sm text-justify leading-relaxed text-gray-600 sm:text-base">
                   {item.description}
                 </p>
                 <div

@@ -354,14 +354,14 @@ function Portfolio() {
 
   return (
     <main className="flex-1 px-container-mobile py-12 md:px-desktop md:py-16">
-      <header className="mb-10 max-w-2xl">
+      <header className="mb-10 max-w-2xl text-center md:text-justify">
         <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-brand-green">
           Karya &amp; pengalaman
         </p>
         <p className="text-3xl font-bold text-brand-green ">
           Portofolio proyek
         </p>
-        <p className="mt-4 leading-relaxed text-gray-600">
+        <p className="mt-4 leading-relaxed text-gray-600 text-justify">
           Beberapa project yang pernah saya kerjakan, mulai dari aplikasi web
           dan mobile hingga perancangan UI/UX.
         </p>

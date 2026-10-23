@@ -17,14 +17,14 @@ const experiences = [
 const Experiences = () => {
   return (
     <main className="flex-1 px-container-mobile py-12 md:px-desktop md:py-16">
-      <header className="mx-auto mb-12 max-w-3xl text-center">
+      <header className=" mb-12 max-w-3xl text-center md:text-left">
         <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-brand-green">
           Pengalaman Kerja
         </p>
         <h1 className="text-3xl font-bold text-brand-green">
           Pengalaman profesional saya
         </h1>
-        <p className="mt-4 text-base leading-relaxed text-gray-600 md:text-lg">
+        <p className="mt-4 text-base leading-relaxed text-justify text-gray-600 md:text-lg">
           Pengalaman mengembangkan aplikasi dan sistem internal perusahaan.
         </p>
       </header>
@@ -46,7 +46,7 @@ const Experiences = () => {
 
               <ul className="mt-6 space-y-3 text-sm leading-relaxed text-gray-600 sm:text-base">
                 {experience.responsibilities.map((responsibility) => (
-                  <li key={responsibility} className="flex gap-3">
+                  <li key={responsibility} className="flex gap-3 text-justify">
                     <span
                       aria-hidden="true"
                       className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-green"

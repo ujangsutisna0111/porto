@@ -161,14 +161,14 @@ const skillGroups = [
 const Skill = () => {
   return (
     <main className="flex-1 px-container-mobile py-12 md:px-desktop md:py-16">
-      <header className="mb-10">
+      <header className="mb-10 text-center md:text-justify">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-green">
           keahlian teknis
         </p>
         <h1 className="text-3xl font-bold text-brand-green">
           Bidang dan teknologi yang saya kuasai
         </h1>
-        <p className="mt-4 text-base leading-relaxed text-gray-600 md:text-lg">
+        <p className="mt-4 text-base leading-relaxed text-justify text-gray-600 md:text-lg">
           Teknologi dan tools yang saya gunakan untuk membangun aplikasi web,
           mobile, backend, dan mengelola database.
         </p>

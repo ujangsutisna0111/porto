@@ -27,10 +27,10 @@ const Home = () => {
   return (
     <main className="flex  flex-1 flex-col-reverse items-center gap-10 px-container-mobile py-12 md:flex-row md:gap-8 md:px-desktop md:py-0">
       <section className="flex w-full flex-col gap-4 items-center md:items-start md:flex-1">
-        <p className="text-shadow-mauve-300 md:text-xl text-brand-green font-bold text-justify">
+        <p className="text-shadow-mauve-300 md:text-xl text-brand-green font-bold text-center md:text-left">
           Sofware Developer ( Web & Mobile developer )
         </p>
-        <h2 className="text-2xl md:text-4xl font-bold text-brand-green">
+        <h2 className="text-2xl md:text-4xl font-bold text-brand-green text-center md:text-left">
           Halo, Saya Ujang sutisna
         </h2>
         <p className="text-sm md:text-md text-justify font-extralight text-gray-500">
