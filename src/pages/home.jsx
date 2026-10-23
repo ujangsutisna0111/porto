@@ -63,7 +63,11 @@ const Home = () => {
                     "--orbit-y": `${50 + 50 * Math.sin(angle)}%`,
                   }}
                 >
-                  <img src={icon} alt="" className="h-7 w-7 object-contain" />
+                  <img
+                    src={icon}
+                    alt=""
+                    className="h4 w-4 md:h-7 md:w-7 object-contain"
+                  />
                   <span>{name}</span>
                 </li>
               );
