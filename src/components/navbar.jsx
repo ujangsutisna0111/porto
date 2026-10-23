@@ -5,10 +5,10 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const linkClassName = ({ isActive }) =>
-    `relative block w-full rounded-lg px-4 py-3 text-sm font-medium transition-colors duration-200 hover:bg-white/5 hover:text-brand-green focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green-hover md:w-fit md:rounded-none md:px-0 md:py-2 md:hover:bg-transparent after:absolute after:inset-x-3 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-green-600 after:transition-transform after:duration-300 ${
+    `relative block w-full rounded-lg px-4 py-3 text-sm font-medium transition-colors duration-200 hover:bg-brand-green/5 hover:text-brand-green focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green-hover md:w-fit md:rounded-none md:px-0 md:py-2 md:hover:bg-transparent after:absolute after:inset-x-3 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-green-600 after:transition-transform after:duration-300 ${
       isActive
         ? "bg-brand-green/10 text-brand-green md:bg-transparent after:scale-x-100"
-        : "text-brand-muted"
+        : "text-gray-700 md:text-brand-muted"
     }`;
 
   const menuNav = [
@@ -80,7 +80,7 @@ const Navbar = () => {
       <nav
         id="main-navigation"
         aria-label="Main navigation"
-        className={`${isMenuOpen ? "block" : "hidden"} absolute left-4 right-4 top-[calc(100%+0.75rem)] rounded-2xl border border-brand-green/20 bg-brand-dark p-3 shadow-xl shadow-black/30 md:static md:block md:w-auto md:rounded-none md:border-0 md:bg-transparent md:p-0 md:shadow-none`}
+        className={`${isMenuOpen ? "block" : "hidden"} absolute left-4 right-4 top-[calc(100%+0.75rem)] rounded-2xl border border-white/70 bg-white/75 p-3 shadow-xl shadow-black/10 backdrop-blur-xl md:static md:block md:w-auto md:rounded-none md:border-0 md:bg-transparent md:p-0 md:shadow-none md:backdrop-blur-none`}
       >
         <ul className="flex flex-col gap-1 md:flex-row md:items-center md:gap-5">
           {menuNav.map((menu) => {
@@ -99,7 +99,6 @@ const Navbar = () => {
           })}
           <li>
             <NavLink
-              to="/about"
               className="mt-2 flex min-h-11 w-full items-center justify-center rounded-lg bg-brand-green px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-green-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green-hover md:mt-0 md:w-auto md:rounded-md"
               onClick={() => setIsMenuOpen(false)}
             >

@@ -201,7 +201,7 @@ function ProjectDetail({ project, onClose }) {
       <section
         aria-labelledby="project-detail-title"
         aria-modal="true"
-        className="max-h-[94dvh] w-full max-w-4xl overflow-y-auto rounded-t-3xl bg-white shadow-2xl sm:rounded-3xl"
+        className="max-h-[94dvh] w-full max-w-4xl overflow-y-auto rounded-t-sm bg-white shadow-2xl"
         role="dialog"
       >
         <div className="sticky top-0 z-10 flex items-center justify-between border-b border-gray-100 bg-white/95 px-5 py-4 backdrop-blur sm:px-8">
@@ -210,7 +210,7 @@ function ProjectDetail({ project, onClose }) {
           </p>
           <button
             aria-label="Tutup detail project"
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-2xl leading-none text-gray-600 transition hover:bg-gray-200 hover:text-gray-900 focus-visible:outline-2 focus-visible:outline-brand-green"
+            className="flex h-10 w-10 items-center justify-center rounded-sm bg-gray-100 text-2xl leading-none text-gray-600 transition hover:bg-gray-200 hover:text-gray-900 focus-visible:outline-2 focus-visible:outline-brand-green"
             onClick={onClose}
             type="button"
           >
@@ -221,7 +221,7 @@ function ProjectDetail({ project, onClose }) {
         <div className="space-y-8 p-5 sm:p-8">
           {gallery.length > 0 && (
             <div>
-              <div className="overflow-hidden rounded-2xl bg-gray-100">
+              <div className="overflow-hidden rounded-sm bg-gray-100">
                 <img
                   alt={`${project.title} - gambar ${activeImage + 1}`}
                   className="max-h-[55vh] w-full object-contain"
@@ -234,7 +234,7 @@ function ProjectDetail({ project, onClose }) {
                     <button
                       aria-label={`Tampilkan gambar ${index + 1}`}
                       aria-pressed={activeImage === index}
-                      className={`h-16 w-24 shrink-0 overflow-hidden rounded-lg border-2 ${
+                      className={`h-16 w-24 shrink-0 overflow-hidden rounded-sm border-2 ${
                         activeImage === index
                           ? "border-brand-green"
                           : "border-transparent"

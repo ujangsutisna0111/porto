@@ -25,8 +25,8 @@ const orbitSkills = [
 
 const Home = () => {
   return (
-    <main className="flex flex-1 flex-col items-center gap-10 px-container-mobile py-12 md:flex-row md:gap-8 md:px-desktop md:py-0">
-      <section className="flex w-full flex-col gap-4 md:flex-1">
+    <main className="flex  flex-1 flex-col-reverse items-center gap-10 px-container-mobile py-12 md:flex-row md:gap-8 md:px-desktop md:py-0">
+      <section className="flex w-full flex-col gap-4 items-center md:items-start md:flex-1">
         <p className="text-xl text-brand-green font-bold">
           Sofware Developer ( Web & Mobile developer )
         </p>
@@ -45,7 +45,6 @@ const Home = () => {
         className="flex w-full flex-col items-center gap-5 md:flex-1"
         aria-labelledby="developer-skills-title"
       >
-        
         <div className="developer-orbit">
           <div className="developer-orbit-track" aria-hidden="true" />
           <ul
