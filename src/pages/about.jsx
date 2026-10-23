@@ -4,17 +4,17 @@ import nodejsIcon from "../assets/svg/nodejs.svg";
 
 const expertise = [
   {
-    title: "Mobile",
+    title: "Mobile development",
     technologies: "Flutter · Dart",
     icon: flutterIcon,
   },
   {
-    title: "Web",
+    title: "Web development",
     technologies: "React · JavaScript",
     icon: reactIcon,
   },
   {
-    title: "Backend",
+    title: "Backend development",
     technologies: "Node.js · Express.js",
     icon: nodejsIcon,
   },
@@ -23,7 +23,7 @@ const expertise = [
 const About = () => {
   return (
     <main className="flex flex-1 flex-col md:flex-row gap-12 px-container-mobile py-10 sm:gap-16 sm:px-8 sm:py-12 lg:gap-20 lg:px-desktop lg:py-16">
-      <section className=" flex-1">
+      <section className="flex flex-col flex-1 items-center md:items-start">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-green">
           Tentang Saya
         </p>
@@ -54,7 +54,7 @@ const About = () => {
         </div>
       </section>
 
-      <section>
+      <section className="flex flex-1 flex-col items-center md:items-start">
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-green">
           Fokus
         </p>
@@ -64,7 +64,7 @@ const About = () => {
         <div className="mt-6 mb-5 max-w-3xl text-left text-base leading-relaxed text-gray-600 sm:text-justify md:text-lg">
           <p>berfokus pada pengembangan aplikasi</p>
         </div>
-        <div className="grid gap-2 grid-cols-3">
+        <div className="grid gap-2 w-full  grid-cols-1  md:grid-cols-2">
           {expertise.map(({ title, technologies, icon }) => (
             <article
               key={title}
