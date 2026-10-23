@@ -1,0 +1,156 @@
+/* 1. Link font harus di paling atas! */
+@import url("https://googleapis.com");
+
+/* 2. Baru panggil Tailwind */
+@import "tailwindcss";
+
+.skill-card-scene {
+  min-height: 340px;
+  perspective: 1000px;
+}
+
+.skill-card-inner {
+  position: relative;
+  min-height: 340px;
+  transform-style: preserve-3d;
+  transition: transform 700ms cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+
+.skill-card-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.skill-card-face {
+  position: absolute;
+  inset: 0;
+  min-height: 340px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.skill-card-back {
+  transform: rotateY(180deg);
+}
+
+.developer-orbit {
+  position: relative;
+  display: grid;
+  width: min(100%, 420px);
+  aspect-ratio: 1;
+  place-items: center;
+}
+
+.developer-orbit-track,
+.developer-orbit-skills {
+  position: absolute;
+  inset: 4%;
+  border: 1px solid color-mix(in srgb, var(--color-brand-green) 28%, transparent);
+  border-radius: 50%;
+}
+
+.developer-orbit-track {
+  animation: developer-orbit-spin 32s linear infinite;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--color-brand-green) 8%, transparent) 0 63%,
+    transparent 64%
+  );
+}
+
+.developer-orbit-skills {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  animation: developer-orbit-spin 32s linear infinite;
+}
+
+.developer-orbit-skill {
+  position: absolute;
+  top: var(--orbit-y);
+  left: var(--orbit-x);
+  display: flex;
+  min-width: 76px;
+  min-height: 70px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 7px;
+  translate: -50% -50%;
+  border: 1px solid color-mix(in srgb, var(--color-brand-green) 18%, white);
+  border-radius: 14px;
+  background: white;
+  box-shadow: 0 8px 24px rgb(3 7 6 / 10%);
+  color: var(--color-brand-text);
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+  animation: developer-orbit-counter-spin 32s linear infinite;
+}
+
+.developer-portrait {
+  position: relative;
+  z-index: 1;
+  width: 59%;
+  aspect-ratio: 1;
+  translate: 0 12px;
+  overflow: hidden;
+  border: 8px solid white;
+  border-radius: 50%;
+  background: var(--color-brand-green);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--color-brand-green) 20%, transparent),
+    0 18px 48px rgb(3 7 6 / 18%);
+}
+
+@keyframes developer-orbit-spin {
+  to {
+    rotate: 1turn;
+  }
+}
+
+@keyframes developer-orbit-counter-spin {
+  to {
+    rotate: -1turn;
+  }
+}
+
+.developer-orbit:hover .developer-orbit-track,
+.developer-orbit:hover .developer-orbit-skills,
+.developer-orbit:hover .developer-orbit-skill {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skill-card-inner {
+    transition-duration: 0.01ms;
+  }
+
+  .developer-orbit-track,
+  .developer-orbit-skills,
+  .developer-orbit-skill {
+    animation: none;
+  }
+}
+
+@theme {
+  /* Skema warna kustom kamu */
+  --color-brand-dark: #030706;
+  --color-brand-surface: #09110f;
+  --color-brand-green: #166534;
+  --color-brand-green-hover: #15803d;
+  --color-brand-text: #000000;
+  --color-brand-muted: #9ca3af;
+  --color-brand-border: #111827;
+
+  --spacing-container-mobile: 1rem;
+  --spacing-desktop: 7rem;
+
+  /* 3. Konfigurasi Font yang Benar untuk Tailwind v4 */
+  --font-sans: "Inter";
+  --font-head: "Space Grotesk";
+
+  /* 4. Paksa Tailwind menggunakan Inter sebagai default global browser */
+  --default-font-family: var(--font-sans), var(--font-sans);
+}
