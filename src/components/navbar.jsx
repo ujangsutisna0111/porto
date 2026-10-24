@@ -99,6 +99,7 @@ const Navbar = () => {
           })}
           <li>
             <NavLink
+              to="/contact"
               className="mt-2 flex min-h-11 w-full items-center justify-center rounded-lg bg-brand-green px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-green-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green-hover md:mt-0 md:w-auto md:rounded-md"
               onClick={() => setIsMenuOpen(false)}
             >
