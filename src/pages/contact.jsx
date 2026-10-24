@@ -1,5 +1,5 @@
-const CONTACT_EMAIL = "ujangsutisnao11@gmail.com";
-const INSTAGRAM_USERNAME = "ujangsutisna";
+const CONTACT_EMAIL = "ujangsutisna0111@gmail.com";
+const INSTAGRAM_USERNAME = "ujang_st_";
 const WHATSAPP_NUMBER = "083877481603";
 const WHATSAPP_LINK_NUMBER = "6283877481603";
 
