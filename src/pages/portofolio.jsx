@@ -5,12 +5,14 @@ import expressIcon from "../assets/svg/express.svg";
 import flutterIcon from "../assets/svg/flutter.svg";
 import phpIcon from "../assets/svg/php.svg";
 import dashboardSales from "../assets/portfolio/sales-portal/dashboard.png";
+import homeSales from "../assets/portfolio/sales-portal/home.png";
 import loginSales from "../assets/portfolio/sales-portal/login.png";
-import mobileSales from "../assets/portfolio/sales-portal/mobile.png";
+import mobileSales from "../assets/portfolio/sales-portal-mobile/Sales Portal App Showcase.png";
 import lms1 from "../assets/portfolio/lms-pendekar-akademi/lms1.png";
 import lms2 from "../assets/portfolio/lms-pendekar-akademi/lms2.png";
 import lms3 from "../assets/portfolio/lms-pendekar-akademi/lms3.png";
 import lms4 from "../assets/portfolio/lms-pendekar-akademi/lms4.png";
+import ecommerceHome from "../assets/portfolio/sistem-informasi-e-commerce/home.png";
 import ecommerceDashboard from "../assets/portfolio/sistem-informasi-e-commerce/dashboard-admin.jpeg";
 import ecommerceProducts from "../assets/portfolio/sistem-informasi-e-commerce/all-product.jpeg";
 import ecommerceSprinter from "../assets/portfolio/sistem-informasi-e-commerce/sprinter.jpeg";
@@ -35,23 +37,43 @@ const stackOptions = {
 
 const projects = [
   {
-    slug: "sales-portal",
-    title: "Sales Portal",
-    role: "Front End Web & Mobile Developer",
+    slug: "sales-portal-web",
+    title: "Sales Portal Web",
+    role: "Front End Web",
     stack: "Dart (Flutter)",
-    category: "Mobile & Web",
-    cover: dashboardSales,
-    gallery: [dashboardSales, loginSales, mobileSales],
+    category: "Web",
+    cover: homeSales,
+    gallery: [homeSales, dashboardSales, loginSales],
     summary:
-      "Portal penjualan lintas web dan mobile untuk mendukung pemantauan data penjualan dan kebutuhan Business Development.",
+      "Portal web penjualan untuk mendukung pemantauan data transaksi dan kebutuhan Business Development.",
     problem:
-      "Pemantauan performa penjualan membutuhkan penyajian data yang terstruktur agar informasi transaksi, performa cabang, dan produk terlaris lebih mudah dianalisis.",
+      "Pemantauan performa penjualan membutuhkan penyajian data yang terstruktur agar informasi transaksi, performa cabang, dan produk terlaris lebih mudah dianalisis melalui web.",
     solution:
-      "Mengembangkan antarmuka Sales Portal untuk web dan mobile dengan visualisasi data penjualan, filter berdasarkan area, cabang, dan rentang tanggal, serta ringkasan performa penjualan.",
+      "Mengembangkan antarmuka Sales Portal Web dengan visualisasi data penjualan, filter berdasarkan area, cabang, dan rentang tanggal, serta ringkasan performa penjualan.",
     points: [
       "Menganalisis kebutuhan dan merancang sistem bersama backend developer.",
       "Berkoordinasi dengan CEO dan Business Development untuk pengembangan fitur.",
       "Melakukan testing, bug tracking, dan vulnerability checking.",
+    ],
+  },
+  {
+    slug: "sales-portal-mobile",
+    title: "Sales Portal Mobile",
+    role: "Mobile Developer",
+    stack: "Dart (Flutter)",
+    category: "Mobile",
+    cover: mobileSales,
+    gallery: [mobileSales],
+    summary:
+      "Aplikasi mobile Sales Portal untuk membantu pemantauan data penjualan saat bepergian.",
+    problem:
+      "Tim membutuhkan akses praktis ke informasi performa penjualan tanpa harus selalu menggunakan portal web.",
+    solution:
+      "Mengembangkan aplikasi mobile Sales Portal dengan tampilan yang disesuaikan untuk perangkat seluler agar ringkasan performa penjualan lebih mudah diakses.",
+    points: [
+      "Berkolaborasi dengan backend developer dalam integrasi data penjualan.",
+      "Menyesuaikan antarmuka dan alur penggunaan untuk perangkat mobile.",
+      "Melakukan testing dan bug tracking.",
     ],
   },
   {
@@ -81,8 +103,13 @@ const projects = [
     role: "Fullstack Web Developer",
     stack: "PHP (CodeIgniter 3)",
     category: "Web",
-    cover: ecommerceDashboard,
-    gallery: [ecommerceDashboard, ecommerceProducts, ecommerceSprinter],
+    cover: ecommerceHome,
+    gallery: [
+      ecommerceHome,
+      ecommerceDashboard,
+      ecommerceProducts,
+      ecommerceSprinter,
+    ],
     summary:
       "Sistem e-commerce yang mencakup pengembangan fitur dari sisi frontend hingga backend.",
     problem:
