@@ -2,12 +2,16 @@ import { useEffect, useState } from "react";
 import codeigniterIcon from "../assets/svg/codeigniter.svg";
 import dartIcon from "../assets/svg/dart.svg";
 import expressIcon from "../assets/svg/express.svg";
+import nodeIcon from "../assets/svg/nodejs.svg";
 import flutterIcon from "../assets/svg/flutter.svg";
 import phpIcon from "../assets/svg/php.svg";
 import dashboardSales from "../assets/portfolio/sales-portal/dashboard.png";
 import homeSales from "../assets/portfolio/sales-portal/home.png";
 import loginSales from "../assets/portfolio/sales-portal/login.png";
 import mobileSales from "../assets/portfolio/sales-portal-mobile/Sales Portal App Showcase.png";
+import inventoryCover from "../assets/portfolio/inventory-web/cover.png";
+import k2nMobileCover from "../assets/portfolio/k2n-mobile/cover.png";
+import lmsCover from "../assets/portfolio/lms-pendekar-akademi/cover.png";
 import lms1 from "../assets/portfolio/lms-pendekar-akademi/lms1.png";
 import lms2 from "../assets/portfolio/lms-pendekar-akademi/lms2.png";
 import lms3 from "../assets/portfolio/lms-pendekar-akademi/lms3.png";
@@ -31,6 +35,7 @@ const stackOptions = {
     { name: "Flutter", icon: flutterIcon },
     { name: "Dart", icon: dartIcon },
     { name: "Express.js", icon: expressIcon },
+    { name: "Node js", icon: nodeIcon },
   ],
   Figma: [{ name: "Figma" }],
 };
@@ -82,8 +87,8 @@ const projects = [
     role: "Frontend Web Developer",
     stack: "Dart (Flutter)",
     category: "Web",
-    cover: lms1,
-    gallery: [lms1, lms2, lms3, lms4],
+    cover: lmsCover,
+    gallery: [lmsCover, lms1, lms2, lms3, lms4],
     summary:
       "Learning Management System internal untuk mendukung pengelolaan training dan pembelajaran karyawan.",
     problem:
@@ -95,6 +100,46 @@ const projects = [
       "Berkolaborasi dengan backend developer dalam integrasi API.",
       "Mengimplementasikan desain UI/UX yang mudah digunakan.",
       "Menyesuaikan implementasi fitur dengan kontrak dan kemampuan API.",
+    ],
+  },
+  {
+    slug: "inventory-web",
+    title: "Inventory Management Web",
+    role: "Web Developer",
+    stack: "PHP (CodeIgniter 3)",
+    category: "Web",
+    cover: inventoryCover,
+    gallery: [inventoryCover],
+    summary:
+      "Aplikasi web untuk membantu pencatatan dan pemantauan data inventaris.",
+    problem:
+      "Data inventaris perlu dikelola secara terpusat agar informasi barang lebih mudah dicatat dan dipantau.",
+    solution:
+      "Membangun aplikasi web inventaris dengan tampilan untuk menyajikan informasi barang secara terstruktur.",
+    points: [
+      "Menyusun tampilan informasi inventaris.",
+      "Mendukung pencatatan dan pemantauan data barang.",
+      "Menyesuaikan fitur dengan kebutuhan pengelolaan inventaris.",
+    ],
+  },
+  {
+    slug: "k2n-mobile",
+    title: "K2N Mobile App",
+    role: "Mobile Developer",
+    stack: "Dart (Flutter)",
+    category: "Mobile",
+    cover: k2nMobileCover,
+    gallery: [k2nMobileCover],
+    summary:
+      "Aplikasi mobile K2N dengan tampilan dan fitur yang disesuaikan untuk penggunaan di perangkat seluler.",
+    problem:
+      "Pengguna membutuhkan akses yang praktis ke informasi dan fitur K2N melalui perangkat mobile.",
+    solution:
+      "Menyajikan pengalaman aplikasi K2N melalui antarmuka mobile yang dirancang untuk penggunaan sehari-hari.",
+    points: [
+      "Mengembangkan tampilan aplikasi untuk perangkat mobile.",
+      "Menyusun alur penggunaan fitur K2N.",
+      "Menyesuaikan pengalaman aplikasi dengan kebutuhan pengguna.",
     ],
   },
   {
