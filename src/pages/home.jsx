@@ -8,7 +8,7 @@ import postgresqlIcon from "../assets/svg/postgresql.svg";
 import rabbitmqIcon from "../assets/svg/rabbitmq.svg";
 import reactIcon from "../assets/svg/react.svg";
 import tailwindIcon from "../assets/svg/tailwindcss.svg";
-import developerPhoto from "../assets/photo.png";
+import developerPhoto from "../assets/photo.webp";
 
 const orbitSkills = [
   { name: "React", icon: reactIcon },

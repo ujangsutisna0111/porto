@@ -23,7 +23,7 @@ const Navbar = () => {
 
   const menuNav = [
     {
-      path: "/home",
+      path: "/",
       title: "home",
     },
     {
@@ -40,7 +40,7 @@ const Navbar = () => {
     },
     {
       path: "/experience",
-      title: "pengalaman",
+      title: "experience",
     },
     {
       path: "/certification",
