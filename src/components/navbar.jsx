@@ -15,10 +15,10 @@ const Navbar = () => {
   }, []);
 
   const linkClassName = ({ isActive }) =>
-    `relative block w-full rounded-lg px-4 py-3 text-sm font-medium transition-colors duration-200 hover:bg-brand-green/5 hover:text-brand-green focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green-hover md:w-fit md:rounded-none md:px-0 md:py-2 md:hover:bg-transparent after:absolute after:inset-x-3 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-green-600 after:transition-transform after:duration-300 ${
+    `relative block w-full rounded-lg px-4 py-3 text-sm font-medium transition-colors duration-200 hover:bg-brand-green/5 hover:text-brand-green focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green-hover md:w-fit md:rounded-none md:px-0 md:py-2 md:hover:bg-transparent after:absolute after:inset-x-1 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-green-600 after:transition-transform after:duration-300 ${
       isActive
-        ? "bg-brand-green/10 text-brand-green md:bg-transparent after:scale-x-100"
-        : "text-gray-700 md:text-brand-muted"
+        ? "bg-brand-green/10  font-extrabold text-brand-green md:bg-transparent after:scale-x-100"
+        : "text-gray-800 md:text-gray-800"
     }`;
 
   const menuNav = [
