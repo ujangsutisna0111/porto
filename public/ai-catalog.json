@@ -1,0 +1,14 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Portofolio Ujang Sutisna"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:ujangsutisna:portfolio:llms-txt",
+      "displayName": "Dokumen LLMs Portofolio Ujang",
+      "type": "llms-txt",
+      "url": "https://ujang-porto.vercel.app"
+    }
+  ]
+}
