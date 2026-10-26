@@ -8,7 +8,7 @@
       "identifier": "urn:air:ujangsutisna:portfolio:llms-txt",
       "displayName": "Dokumen LLMs Portofolio Ujang",
       "type": "llms-txt",
-      "url": "https://ujang-porto.vercel.app"
+      "url": "https://ujang-porto.vercel.app/llms.txt"
     }
   ]
 }
