@@ -4,7 +4,7 @@ const SkillCard = ({ title, skills, details }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <article className="skill-card-scene group relative">
+    <article data-aos={"fade-up"} className="skill-card-scene group relative">
       <button
         type="button"
         aria-label={`${isFlipped ? "Kembali ke daftar" : "Lihat detail"} ${title}`}
@@ -17,7 +17,7 @@ const SkillCard = ({ title, skills, details }) => {
       <div className={`skill-card-inner${isFlipped ? " is-flipped" : ""}`}>
         <section className="skill-card-face skill-card-front rounded-2xl border border-gray-300 bg-white p-6 shadow-2xl shadow-gray-300 transition-colors group-hover:border-brand-green/60">
           <h2 className="mb-6 pr-16 text-xl font-semibold text-gray-900">
-            {title}
+            {title},
           </h2>
           <ul className="grid grid-cols-3 gap-x-3 gap-y-5">
             {skills.map(({ name, icon }) => (

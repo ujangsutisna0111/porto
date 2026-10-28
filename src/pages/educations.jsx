@@ -31,7 +31,10 @@ const education = [
 const Educations = () => {
   return (
     <main className="flex-1 px-container-mobile py-12 md:px-desktop md:py-16">
-      <header className=" mb-12 max-w-3xl text-center md:text-left">
+      <header
+        data-aos="fade-right"
+        className=" mb-12 max-w-3xl text-center md:text-left"
+      >
         <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-brand-green">
           Pendidikan &amp; Pembelajaran
         </p>
@@ -50,6 +53,7 @@ const Educations = () => {
 
           return (
             <li
+              data-aos="fade-up "
               key={item.title}
               className="relative pb-8 pl-10 last:pb-0 md:grid md:grid-cols-2 md:gap-12 md:pb-12 md:pl-0"
             >

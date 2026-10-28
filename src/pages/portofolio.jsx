@@ -426,7 +426,10 @@ function Portfolio() {
 
   return (
     <main className="flex-1 px-container-mobile py-12 md:px-desktop md:py-16">
-      <header className="mb-10 max-w-2xl text-center md:text-justify">
+      <header
+        data-aos="fade-right"
+        className="mb-10 max-w-2xl text-center md:text-justify"
+      >
         <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-brand-green">
           Karya &amp; pengalaman
         </p>
@@ -445,6 +448,7 @@ function Portfolio() {
       >
         {projects.map((project) => (
           <article
+            data-aos="fade-up"
             onClick={() => setSelectedProject(project)}
             className="group flex min-w-0 flex-col overflow-hidden rounded-sm border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-brand-green/40 hover:shadow-xl motion-reduce:transform-none motion-reduce:transition-none"
             key={project.slug}

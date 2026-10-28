@@ -295,7 +295,10 @@ function Certification() {
 
   return (
     <main className="flex-1 px-container-mobile py-12 md:px-desktop md:py-16">
-      <header className="mb-10 max-w-2xl text-center md:text-justify">
+      <header
+        data-aos="fade-right"
+        className="mb-10 max-w-2xl text-center md:text-justify"
+      >
         <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-brand-green">
           Sertifikasi
         </p>
@@ -309,6 +312,7 @@ function Certification() {
       </header>
 
       <section
+        data-aos="fade-up"
         aria-label="Daftar sertifikasi"
         className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3"
       >

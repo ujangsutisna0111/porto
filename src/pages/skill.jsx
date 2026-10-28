@@ -159,9 +159,13 @@ const skillGroups = [
 ];
 
 const Skill = () => {
+
   return (
     <main className="flex-1 px-container-mobile py-12 md:px-desktop md:py-16">
-      <header className="mb-10 text-center md:text-justify">
+      <header
+        data-aos="fade-down"
+        className="mb-10 text-center md:text-justify"
+      >
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand-green">
           keahlian teknis
         </p>
@@ -177,8 +181,8 @@ const Skill = () => {
         aria-label="Skill categories"
         className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4"
       >
-        {skillGroups.map((group) => (
-          <SkillCard key={group.title} {...group} />
+        {skillGroups.map((group, index) => (
+          <SkillCard key={group.title} index={index} {...group} />
         ))}
       </section>
     </main>

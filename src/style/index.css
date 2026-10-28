@@ -97,7 +97,7 @@
   overflow: hidden;
   border: 8px solid white;
   border-radius: 50%;
-  background: var(--color-brand-green);
+  background: var(--color-brand-muted);
   box-shadow:
     0 0 0 1px color-mix(in srgb, var(--color-brand-green) 20%, transparent),
     0 18px 48px rgb(3 7 6 / 18%);
@@ -211,4 +211,114 @@
 
   /* 4. Paksa Tailwind menggunakan Inter sebagai default global browser */
   --default-font-family: var(--font-sans), var(--font-sans);
+}
+
+.dark {
+  color-scheme: dark;
+  --color-brand-green: #166534;
+  --color-brand-green-hover: #15803d;
+  --color-brand-text: #e5e7eb;
+  --color-green-600: #166534;
+}
+
+.dark body {
+  background-color: var(--color-brand-dark);
+  color: #e5e7eb;
+}
+
+.dark .bg-white,
+.dark [class~="bg-white/75"],
+.dark [class~="bg-white/90"],
+.dark [class~="bg-white/95"] {
+  background-color: var(--color-brand-surface);
+}
+
+.dark .developer-orbit-skill {
+  border-color: color-mix(in srgb, var(--color-brand-green) 26%, #09110f);
+  background-color: var(--color-brand-surface);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 24%);
+  color: #e5e7eb;
+}
+
+.dark .developer-portrait {
+  border-color: var(--color-brand-surface);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--color-brand-green) 20%, transparent),
+    0 18px 48px rgb(0 0 0 / 32%);
+}
+
+.dark .bg-gray-50,
+.dark .bg-gray-100 {
+  background-color: #101b17;
+}
+
+.dark [class~="bg-green-50"],
+.dark [class~="bg-green-50/70"] {
+  background-color: color-mix(in srgb, var(--color-brand-green) 12%, #09110f);
+}
+
+.dark .bg-pink-50 {
+  background-color: #291526;
+}
+
+.dark .text-gray-900,
+.dark .text-gray-800,
+.dark .text-gray-700 {
+  color: #e5e7eb;
+}
+
+.dark .text-gray-600,
+.dark .text-gray-500 {
+  color: #a7b5ad;
+}
+
+.dark .text-gray-400 {
+  color: #84958b;
+}
+
+.dark .border-gray-100,
+.dark .border-gray-200,
+.dark .border-gray-300 {
+  border-color: color-mix(in srgb, var(--color-brand-green) 26%, #09110f);
+}
+
+.dark .border-white\/50 {
+  border-color: color-mix(in srgb, var(--color-brand-green) 14%, transparent);
+}
+
+.dark .border-green-200 {
+  border-color: color-mix(in srgb, var(--color-brand-green) 24%, #09110f);
+}
+
+.dark .border-amber-200 {
+  border-color: #745a27;
+}
+
+.dark .bg-amber-50\/70 {
+  background-color: #211b0d;
+}
+
+.dark article[class*="border"],
+.dark form.rounded-2xl,
+.dark .skill-card-face {
+  border-color: color-mix(in srgb, var(--color-brand-green) 26%, #09110f);
+  box-shadow: 0 8px 26px rgb(34 197 94 / 16%);
+}
+
+.dark article[class*="border"]:hover,
+.dark form.rounded-2xl:hover,
+.dark .skill-card-face:hover {
+  box-shadow: 0 12px 32px rgb(34 197 94 / 24%);
+}
+
+.dark input,
+.dark textarea {
+  border-color: color-mix(in srgb, var(--color-brand-green) 26%, #09110f);
+  background-color: #09110f;
+  color: #e5e7eb;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #84958b;
 }

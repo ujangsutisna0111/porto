@@ -17,7 +17,10 @@ const experiences = [
 const Experiences = () => {
   return (
     <main className="flex-1 px-container-mobile py-12 md:px-desktop md:py-16">
-      <header className=" mb-12 max-w-3xl text-center md:text-left">
+      <header
+        data-aos="fade-right"
+        className=" mb-12 max-w-3xl text-center md:text-left"
+      >
         <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-brand-green">
           Pengalaman Kerja
         </p>
@@ -32,7 +35,10 @@ const Experiences = () => {
       <ol className="mx-auto max-w-4xl">
         {experiences.map((experience) => (
           <li key={`${experience.company}-${experience.role}`}>
-            <article className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-lg sm:p-8">
+            <article
+              data-aos="fade-up"
+              className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-lg sm:p-8"
+            >
               <p className="text-sm font-semibold text-brand-green">
                 {experience.period}
               </p>

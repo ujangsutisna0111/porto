@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import dartIcon from "../assets/svg/dart.svg";
 import flutterIcon from "../assets/svg/flutter.svg";
 import javascriptIcon from "../assets/svg/javascript.svg";
@@ -26,22 +27,58 @@ const orbitSkills = [
 const Home = () => {
   return (
     <main className="flex  flex-1 flex-col-reverse items-center gap-10 px-container-mobile py-12 md:flex-row md:gap-8 md:px-desktop md:py-0">
-      <section className="flex w-full flex-col gap-4 items-center md:items-start md:flex-1">
-        <p className="text-shadow-mauve-300 md:text-xl text-brand-green font-bold text-center md:text-left">
-          Sofware Developer ( Web & Mobile developer )
-        </p>
+      <section
+        data-aos="fade-right"
+        className="flex w-full flex-col gap-4 items-center md:items-start md:flex-1"
+      >
+        <h1 className="uppercase text-shadow-mauve-300 md:text-xl text-brand-green  text-center md:text-left">
+          Fullstack Web & Mobile dEVELOPER
+        </h1>
         <h2 className="text-2xl md:text-4xl font-bold text-brand-green text-center md:text-left">
           Halo, Saya Ujang sutisna
         </h2>
-        <p className="text-sm md:text-md text-justify font-extralight text-gray-500">
+        <p className=" md:text-md text-justify font-extralight text-gray-500">
           Software Developer yang berfokus pada pengembangan aplikasi Web dan
           Mobile dengan memperhatikan kualitas kode, arsitektur yang
           terstruktur, performa, dan keamanan. Memiliki pengalaman menggunakan
           berbagai teknologi untuk membangun aplikasi yang efisien,
           maintainable, dan scalable.
         </p>
+        <div className="mt-2 flex w-full flex-col gap-4 sm:w-auto sm:flex-row sm:items-center">
+          <Link
+            to="/contact"
+            className="inline-flex min-h-11 items-center justify-center rounded-lg bg-brand-green px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-green-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green-hover"
+          >
+            Hubungi Saya
+          </Link>
+          <p className="inline-flex items-center justify-center gap-2 text-sm font-medium text-gray-600 sm:justify-start">
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              className="h-5 w-5 shrink-0 text-brand-green"
+            >
+              <path
+                d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <circle
+                cx="12"
+                cy="10"
+                r="2.5"
+                stroke="currentColor"
+                strokeWidth="1.8"
+              />
+            </svg>
+            <span>Tangerang, Banten</span>
+          </p>
+        </div>
       </section>
       <section
+        data-aos="fade-left"
         className="flex w-full flex-col items-center gap-5 md:flex-1"
         aria-labelledby="developer-skills-title"
       >

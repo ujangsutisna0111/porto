@@ -4,6 +4,12 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const savedTheme = window.localStorage.getItem("theme");
+    return savedTheme
+      ? savedTheme === "dark"
+      : window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
 
   useEffect(() => {
     const updateScrollState = () => setIsScrolled(window.scrollY > 8);
@@ -13,6 +19,11 @@ const Navbar = () => {
 
     return () => window.removeEventListener("scroll", updateScrollState);
   }, []);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", isDarkMode);
+    window.localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+  }, [isDarkMode]);
 
   const linkClassName = ({ isActive }) =>
     `relative block w-full rounded-lg px-4 py-3 text-sm font-medium transition-colors duration-200 hover:bg-brand-green/5 hover:text-brand-green focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green-hover md:w-fit md:rounded-none md:px-0 md:py-2 md:hover:bg-transparent after:absolute after:inset-x-1 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-green-600 after:transition-transform after:duration-300 ${
@@ -68,30 +79,79 @@ const Navbar = () => {
         Ujang sutisna
       </NavLink>
 
-      <button
-        type="button"
-        className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-xl border border-brand-green/20 text-brand-text transition-colors hover:bg-white/5 hover:text-brand-green-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green-hover md:hidden"
-        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        aria-expanded={isMenuOpen}
-        aria-controls="main-navigation"
-        onClick={() => setIsMenuOpen((isOpen) => !isOpen)}
-      >
-        <span
-          className={`h-0.5 w-5 bg-current transition-transform duration-200 ${
-            isMenuOpen ? "translate-y-2 rotate-45" : ""
-          }`}
-        />
-        <span
-          className={`h-0.5 w-5 bg-current transition-opacity duration-200 ${
-            isMenuOpen ? "opacity-0" : ""
-          }`}
-        />
-        <span
-          className={`h-0.5 w-5 bg-current transition-transform duration-200 ${
-            isMenuOpen ? "-translate-y-2 -rotate-45" : ""
-          }`}
-        />
-      </button>
+      <div className="flex items-center gap-2 md:order-1">
+        <button
+          type="button"
+          className="flex h-11 w-11 items-center justify-center rounded-xl border border-brand-green/20 text-brand-text transition-colors hover:bg-brand-green/5 hover:text-brand-green-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green-hover"
+          aria-label={
+            isDarkMode ? "Aktifkan mode terang" : "Aktifkan mode malam"
+          }
+          aria-pressed={isDarkMode}
+          onClick={() => setIsDarkMode((darkMode) => !darkMode)}
+        >
+          {isDarkMode ? (
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              className="h-5 w-5"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="4"
+                stroke="currentColor"
+                strokeWidth="1.7"
+              />
+              <path
+                d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"
+                stroke="currentColor"
+                strokeWidth="1.7"
+                strokeLinecap="round"
+              />
+            </svg>
+          ) : (
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              fill="none"
+              className="h-5 w-5"
+            >
+              <path
+                d="M20.2 15.2A8.5 8.5 0 0 1 8.8 3.8 8.5 8.5 0 1 0 20.2 15.2Z"
+                stroke="currentColor"
+                strokeWidth="1.7"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          )}
+        </button>
+        <button
+          type="button"
+          className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-xl border border-brand-green/20 text-brand-text transition-colors hover:bg-brand-green/5 hover:text-brand-green-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green-hover md:hidden"
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMenuOpen}
+          aria-controls="main-navigation"
+          onClick={() => setIsMenuOpen((isOpen) => !isOpen)}
+        >
+          <span
+            className={`h-0.5 w-5 bg-current transition-transform duration-200 ${
+              isMenuOpen ? "translate-y-2 rotate-45" : ""
+            }`}
+          />
+          <span
+            className={`h-0.5 w-5 bg-current transition-opacity duration-200 ${
+              isMenuOpen ? "opacity-0" : ""
+            }`}
+          />
+          <span
+            className={`h-0.5 w-5 bg-current transition-transform duration-200 ${
+              isMenuOpen ? "-translate-y-2 -rotate-45" : ""
+            }`}
+          />
+        </button>
+      </div>
 
       <nav
         id="main-navigation"
