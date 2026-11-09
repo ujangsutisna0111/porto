@@ -5,6 +5,9 @@ import expressIcon from "../assets/svg/express.svg";
 import nodeIcon from "../assets/svg/nodejs.svg";
 import flutterIcon from "../assets/svg/flutter.svg";
 import phpIcon from "../assets/svg/php.svg";
+import pythonIcon from "../assets/svg/python.svg";
+import fastapiIcon from "../assets/svg/fastapi.svg";
+import nextjsIcon from "../assets/svg/nextjs.svg";
 import dashboardSales from "../assets/portfolio/sales-portal/dashboard.png";
 import homeSales from "../assets/portfolio/sales-portal/home.png";
 import loginSales from "../assets/portfolio/sales-portal/login.png";
@@ -21,8 +24,14 @@ import ecommerceDashboard from "../assets/portfolio/sistem-informasi-e-commerce/
 import ecommerceProducts from "../assets/portfolio/sistem-informasi-e-commerce/all-product.jpeg";
 import ecommerceSprinter from "../assets/portfolio/sistem-informasi-e-commerce/sprinter.jpeg";
 import sitbPoster from "../assets/portfolio/spparu/spparu-poster.png";
+import ticketingPoster from "../assets/portfolio/ticketing/Poster Promo Aplikasi TICKETIN Modern.png";
 
 const stackOptions = {
+  "Python, FastAPI, Next.js": [
+    { name: "Python", icon: pythonIcon },
+    { name: "FastAPI", icon: fastapiIcon },
+    { name: "Next.js", icon: nextjsIcon },
+  ],
   "Dart (Flutter)": [
     { name: "Flutter", icon: flutterIcon },
     { name: "Dart", icon: dartIcon },
@@ -41,6 +50,27 @@ const stackOptions = {
 };
 
 const projects = [
+  {
+    slug: "ticketin",
+    title: "Ticketin - Sistem Ticketing",
+    role: "Fullstack Developer",
+    stack: "Python, FastAPI, Next.js",
+    category: "Web",
+    cover: ticketingPoster,
+    gallery: [ticketingPoster],
+    summary:
+      "Sistem ticketing multi-tenant dengan chat realtime di setiap tiket dan pemantauan percakapan langsung dari sistem.",
+    problem:
+      "Penanganan kendala membutuhkan alur tiket yang terorganisir, komunikasi yang terhubung dengan tiket, serta pemisahan data untuk setiap tenant.",
+    solution:
+      "Mengembangkan sistem ticketing multi-tenant dengan backend Python dan FastAPI serta frontend Next.js. Setiap tiket memiliki chat realtime yang dapat dipantau langsung melalui sistem.",
+    points: [
+      "Mengembangkan backend menggunakan Python dan FastAPI.",
+      "Membangun antarmuka sistem menggunakan Next.js.",
+      "Menyediakan chat realtime pada setiap tiket agar komunikasi tetap terpusat.",
+      "Mendukung pemantauan percakapan tiket secara langsung dan penggunaan multi-tenant.",
+    ],
+  },
   {
     slug: "sales-portal-web",
     title: "Sales Portal Web",

@@ -1,21 +1,24 @@
+import { useState } from "react";
 import codeigniterIcon from "../assets/svg/codeigniter.svg";
 import bootstrapIcon from "../assets/svg/bootstrap.svg";
 import cssIcon from "../assets/svg/css.svg";
 import dartIcon from "../assets/svg/dart.svg";
 import expressIcon from "../assets/svg/express.svg";
+import fastapiIcon from "../assets/svg/fastapi.svg";
 import flutterIcon from "../assets/svg/flutter.svg";
 import htmlIcon from "../assets/svg/html.svg";
 import javascriptIcon from "../assets/svg/javascript.svg";
+import nextjsIcon from "../assets/svg/nextjs.svg";
 import nodejsIcon from "../assets/svg/nodejs.svg";
 import sqlServerIcon from "../assets/svg/microsoftsqlserver.svg";
 import mysqlIcon from "../assets/svg/mysql.svg";
 import phpIcon from "../assets/svg/php.svg";
+import pythonIcon from "../assets/svg/python.svg";
 import postgresqlIcon from "../assets/svg/postgresql.svg";
 import rabbitmqIcon from "../assets/svg/rabbitmq.svg";
 import reactIcon from "../assets/svg/react.svg";
 import redisIcon from "../assets/svg/redis.svg";
 import tailwindIcon from "../assets/svg/tailwindcss.svg";
-import SkillCard from "../components/skillCard";
 
 const skillGroups = [
   {
@@ -24,6 +27,11 @@ const skillGroups = [
       {
         name: "React",
         description: "Komponen, Hooks, dan proses menampilkan antarmuka.",
+      },
+      {
+        name: "Next.js",
+        description:
+          "Pengembangan aplikasi React dengan routing dan rendering.",
       },
       {
         name: "Tailwind CSS",
@@ -48,13 +56,22 @@ const skillGroups = [
       { name: "CSS", icon: cssIcon },
       { name: "JavaScript", icon: javascriptIcon },
       { name: "React", icon: reactIcon },
-      { name: "Tailwind CSS", icon: tailwindIcon },
+      { name: "Next.js", icon: nextjsIcon },
+      { name: "Tailwind", icon: tailwindIcon },
       { name: "Bootstrap", icon: bootstrapIcon },
     ],
   },
   {
     title: "Backend Development",
     details: [
+      {
+        name: "Python",
+        description: "Pengembangan backend dan logika aplikasi.",
+      },
+      {
+        name: "FastAPI",
+        description: "Pembuatan REST API menggunakan Python.",
+      },
       {
         name: "REST API",
         description: "Perancangan API dan penggunaan metode HTTP.",
@@ -79,6 +96,8 @@ const skillGroups = [
       },
     ],
     skills: [
+      { name: "Python", icon: pythonIcon },
+      { name: "FastAPI", icon: fastapiIcon },
       { name: "JavaScript", icon: javascriptIcon },
       { name: "Node.js", icon: nodejsIcon },
       { name: "Express.js", icon: expressIcon },
@@ -158,8 +177,85 @@ const skillGroups = [
   },
 ];
 
-const Skill = () => {
+const SkillCard = ({ title, skills, details }) => {
+  const [isFlipped, setIsFlipped] = useState(false);
 
+  return (
+    <article
+      data-aos="fade-up"
+      className="skill-card-scene group relative h-[390px]"
+    >
+      <button
+        type="button"
+        aria-label={`${isFlipped ? "Kembali ke daftar skill" : "Lihat detail"} ${title}`}
+        aria-expanded={isFlipped}
+        className="absolute right-4 top-4 z-10 rounded-full border border-gray-300 bg-white/95 px-3 py-1.5 text-xs font-medium text-gray-700 shadow-sm transition-colors hover:border-brand-green hover:text-brand-green focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green"
+        onClick={() => setIsFlipped((flipped) => !flipped)}
+      >
+        {isFlipped ? "Kembali" : "Detail"}
+      </button>
+
+      <div className={`skill-card-inner${isFlipped ? " is-flipped" : ""}`}>
+        <section className="skill-card-face skill-card-front flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-colors group-hover:border-brand-green/40 sm:p-6">
+          <header className="pr-20">
+            <p className="mb-1 text-xs font-semibold uppercase tracking-[0.16em] text-brand-green">
+              Area keahlian
+            </p>
+            <h2 className="text-xl font-semibold text-gray-900">{title}</h2>
+          </header>
+
+          <ul className="mt-4 grid grid-cols-4 gap-[10px]">
+            {skills.map(({ name, icon }) => (
+              <li
+                className="flex w-16 min-w-0 flex-col items-center gap-1 text-center"
+                key={name}
+              >
+                <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-gray-200 bg-gray-50 p-4 shadow-sm transition-colors group-hover:border-brand-green/30">
+                  <img
+                    alt=""
+                    className="h-full w-full object-contain"
+                    src={icon}
+                  />
+                </span>
+                <span className="min-w-0 text-xs font-medium leading-tight text-gray-700">
+                  {name}
+                </span>
+              </li>
+            ))}
+          </ul>
+
+          <p className="mt-auto border-t border-gray-100 pt-4 text-xs text-gray-400">
+            Tekan Detail untuk melihat teknologi pendukung.
+          </p>
+        </section>
+
+        <section
+          aria-label={`Detail teknologi pendukung ${title}`}
+          className="skill-card-face skill-card-back flex flex-col overflow-hidden rounded-2xl border border-brand-green/30 bg-white p-5 shadow-sm sm:p-6"
+        >
+          <header className="shrink-0 pr-20">
+            <p className="mb-1 text-xs font-semibold uppercase tracking-[0.16em] text-brand-green">
+              Teknologi pendukung
+            </p>
+            <h2 className="text-xl font-semibold text-gray-900">{title}</h2>
+          </header>
+          <ul className="mt-4 min-h-0 flex-1 space-y-2 overflow-y-auto pr-1">
+            {details.map(({ name, description }) => (
+              <li className="rounded-xl bg-gray-50 p-3" key={name}>
+                <h3 className="text-sm font-semibold text-gray-900">{name}</h3>
+                <p className="mt-1 text-xs leading-relaxed text-gray-600">
+                  {description}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </div>
+    </article>
+  );
+};
+
+const Skill = () => {
   return (
     <main className="flex-1 px-container-mobile py-12 md:px-desktop md:py-16">
       <header
@@ -179,10 +275,10 @@ const Skill = () => {
       </header>
       <section
         aria-label="Skill categories"
-        className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4"
+        className="mx-auto grid max-w-6xl grid-cols-1 items-start gap-5 md:grid-cols-2 md:gap-6 xl:grid-cols-3"
       >
-        {skillGroups.map((group, index) => (
-          <SkillCard key={group.title} index={index} {...group} />
+        {skillGroups.map((group) => (
+          <SkillCard key={group.title} {...group} />
         ))}
       </section>
     </main>

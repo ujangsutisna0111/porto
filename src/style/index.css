@@ -4,13 +4,12 @@
 @import "tailwindcss";
 
 .skill-card-scene {
-  min-height: 340px;
   perspective: 1000px;
 }
 
 .skill-card-inner {
   position: relative;
-  min-height: 340px;
+  height: 100%;
   transform-style: preserve-3d;
   transition: transform 700ms cubic-bezier(0.2, 0.75, 0.25, 1);
 }
@@ -22,7 +21,6 @@
 .skill-card-face {
   position: absolute;
   inset: 0;
-  min-height: 340px;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
